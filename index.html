@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
+    <meta name="description" content="Mistbound — история о драконе, затерянном в ледяном тумане.">
+    <title>Mistbound</title>
+    <link rel="stylesheet" href="game.css">
+    <script src="menu.js" defer></script>
+</head>
+<body>
+    <main class="game-screen">
+        <header class="game-header">
+            <a class="studio-mark" href="#home" data-view="home" aria-label="На главный экран">
+                <span class="studio-symbol" aria-hidden="true">M<span>/</span>B</span>
+                <span>Mistbound</span>
+            </a>
+            <div class="system-status"><span class="status-light"></span> ГРАНИЦА ТУМАНА</div>
+            <button class="header-settings" type="button" data-view="settings" aria-label="Настройки" title="Настройки">⚙</button>
+        </header>
 
+        <section class="stage" aria-label="Главное меню игры">
+            <div class="landscape" aria-hidden="true"></div>
+            <div class="stage-content">
+                <section class="game-title-block" id="game-title">
+                    <p class="chapter-label"><span>ЛЕДЯНОЕ НАГОРЬЕ</span><span>ГЛАВА 01 / 06</span></p>
+                    <h1>MIST<br><span>BOUND</span></h1>
+                    <p class="game-logline">За границей тумана просыпается Fogwarden.</p>
+                </section>
+                <div class="menu-layout">
+                    <nav class="game-nav" aria-label="Игровое меню">
+                        <button class="menu-item" type="button" data-view="solo"><span class="menu-index">01</span><span>Одиночная игра</span><span class="menu-arrow">↗</span></button>
+                        <button class="menu-item" type="button" disabled title="Игровой процесс отключён"><span class="menu-index">02</span><span>Продолжить</span><span class="menu-arrow">↗</span></button>
+                        <button class="menu-item" type="button" data-view="coop"><span class="menu-index">03</span><span>Совместная игра</span><span class="menu-arrow">↗</span></button>
+                        <button class="menu-item" type="button" data-view="saves"><span class="menu-index">04</span><span>Сохранения</span><span class="menu-arrow">↗</span></button>
+                        <button class="menu-item" type="button" data-view="settings"><span class="menu-index">05</span><span>Настройки</span><span class="menu-arrow">↗</span></button>
+                    </nav>
+                    <section class="menu-panel" id="menu-panel" aria-live="polite"></section>
+                </div>
+            </div>
+            <footer class="game-footer"><span>© MISTBOUND</span><span><kbd>↑</kbd><kbd>↓</kbd> НАВИГАЦИЯ <span class="footer-divider">·</span> <kbd>ENTER</kbd> ВЫБРАТЬ</span><span>ДЕМО · V 0.2.0</span></footer>
+        </section>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </main>
+</body>
+</html>
